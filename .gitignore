@@ -15,5 +15,5 @@ node_modules/
 /npm-debug.log
 build/
 out/
-dist/
-dist-koi/
+/dist
+/dist-koi
