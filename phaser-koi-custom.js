@@ -26,6 +26,7 @@ var Phaser = {
     Events: require('events/EventEmitter'),
     Game: require('core/Game'),
     GameObjects: {
+        Container: require('gameobjects/container/Container'),
         DisplayList: require('gameobjects/DisplayList'),
         DOMElement: require('gameobjects/domelement/DOMElement'),
         GameObjectCreator: require('gameobjects/GameObjectCreator'),
@@ -36,10 +37,12 @@ var Phaser = {
         BuildGameObjectAnimation: require('gameobjects/BuildGameObjectAnimation'),
         GameObject: require('gameobjects/GameObject'),
         Graphics: require('gameobjects/graphics/Graphics.js'),
+        Group: require('gameobjects/group/Group'),
         Image: require('gameobjects/image/Image'),
         Sprite: require('gameobjects/sprite/Sprite'),
         Text: require('gameobjects/text/static/Text'),
         Factories: {
+            Container: require('gameobjects/container/ContainerFactory'),
             DOMElement: require('gameobjects/domelement/DOMElementFactory'),
             Graphics: require('gameobjects/graphics/GraphicsFactory'),
             Image: require('gameobjects/image/ImageFactory'),
@@ -47,6 +50,7 @@ var Phaser = {
             Text: require('gameobjects/text/static/TextFactory')
         },
         Creators: {
+            Container: require('gameobjects/container/ContainerCreator'),
             Graphics: require('gameobjects/graphics/GraphicsCreator'),
             Image: require('gameobjects/image/ImageCreator'),
             Sprite: require('gameobjects/sprite/SpriteCreator'),
