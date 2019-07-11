@@ -14,7 +14,6 @@ var Extend = require('utils/object/Extend');
  */
 
 var Phaser = {
-
     Animations: require('animations'),
     Cache: require('cache'),
     Cameras: { Scene2D: require('cameras/2d') },
@@ -26,32 +25,37 @@ var Phaser = {
     Events: require('events/EventEmitter'),
     Game: require('core/Game'),
     GameObjects: {
-        Container: require('gameobjects/container/Container'),
         DisplayList: require('gameobjects/DisplayList'),
-        DOMElement: require('gameobjects/domelement/DOMElement'),
         GameObjectCreator: require('gameobjects/GameObjectCreator'),
         GameObjectFactory: require('gameobjects/GameObjectFactory'),
         UpdateList: require('gameobjects/UpdateList'),
+
         Components: require('gameobjects/components'),
+
         BuildGameObject: require('gameobjects/BuildGameObject'),
         BuildGameObjectAnimation: require('gameobjects/BuildGameObjectAnimation'),
         GameObject: require('gameobjects/GameObject'),
+
+        Container: require('gameobjects/container/Container'),
         Graphics: require('gameobjects/graphics/Graphics.js'),
         Group: require('gameobjects/group/Group'),
         Image: require('gameobjects/image/Image'),
         Sprite: require('gameobjects/sprite/Sprite'),
         Text: require('gameobjects/text/static/Text'),
+
         Factories: {
             Container: require('gameobjects/container/ContainerFactory'),
-            DOMElement: require('gameobjects/domelement/DOMElementFactory'),
             Graphics: require('gameobjects/graphics/GraphicsFactory'),
+            Group: require('gameobjects/group/GroupFactory'),
             Image: require('gameobjects/image/ImageFactory'),
             Sprite: require('gameobjects/sprite/SpriteFactory'),
             Text: require('gameobjects/text/static/TextFactory')
         },
+
         Creators: {
             Container: require('gameobjects/container/ContainerCreator'),
             Graphics: require('gameobjects/graphics/GraphicsCreator'),
+            Group: require('gameobjects/group/GroupCreator'),
             Image: require('gameobjects/image/ImageCreator'),
             Sprite: require('gameobjects/sprite/SpriteCreator'),
             Text: require('gameobjects/text/static/TextCreator')
