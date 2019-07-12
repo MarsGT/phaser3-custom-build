@@ -101,7 +101,8 @@ var Phaser = {
     Structs: require('structs'),
     Textures: require('textures'),
     Time: require('time'),
-    Tweens: require('tweens')
+    Tweens: require('tweens'),
+    Utils: require('utils')
 };
 
 //   Merge in the consts
