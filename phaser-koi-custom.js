@@ -88,9 +88,9 @@ var Phaser = {
         XHRSettings: require('loader/XHRSettings')
     },
     Math: require('math'),
-    Physics: {
-        Arcade: require('physics/arcade')
-    },
+    // Physics: {
+    //     Arcade: require('physics/arcade')
+    // },
     Plugins: require('plugins'),
     Renderer: require('renderer'),
     Scale: require('scale'),
