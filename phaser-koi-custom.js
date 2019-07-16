@@ -49,7 +49,8 @@ var Phaser = {
             Group: require('gameobjects/group/GroupFactory'),
             Image: require('gameobjects/image/ImageFactory'),
             Sprite: require('gameobjects/sprite/SpriteFactory'),
-            Text: require('gameobjects/text/static/TextFactory')
+            Text: require('gameobjects/text/static/TextFactory'),
+            StaticBitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory')
         },
 
         Creators: {
@@ -58,25 +59,21 @@ var Phaser = {
             Group: require('gameobjects/group/GroupCreator'),
             Image: require('gameobjects/image/ImageCreator'),
             Sprite: require('gameobjects/sprite/SpriteCreator'),
-            Text: require('gameobjects/text/static/TextCreator')
+            Text: require('gameobjects/text/static/TextCreator'),
+            StaticBitmapText: require('gameobjects/bitmaptext/static/BitmapTextCreator'),
         }
     },
     Geom: require('geom'),
     Input: require('input'),
     Loader: {
         FileTypes: {
-            AnimationJSONFile: require('loader/filetypes/AnimationJSONFile'),
             AtlasJSONFile: require('loader/filetypes/AtlasJSONFile'),
             AudioFile: require('loader/filetypes/AudioFile'),
-            AudioSpriteFile: require('loader/filetypes/AudioSpriteFile'),
             HTML5AudioFile: require('loader/filetypes/HTML5AudioFile'),
             ImageFile: require('loader/filetypes/ImageFile'),
             JSONFile: require('loader/filetypes/JSONFile'),
-            MultiAtlasFile: require('loader/filetypes/MultiAtlasFile'),
             PluginFile: require('loader/filetypes/PluginFile'),
-            ScriptFile: require('loader/filetypes/ScriptFile'),
             SpriteSheetFile: require('loader/filetypes/SpriteSheetFile'),
-            TextFile: require('loader/filetypes/TextFile'),
             XMLFile: require('loader/filetypes/XMLFile')
         },
         File: require('loader/File'),
