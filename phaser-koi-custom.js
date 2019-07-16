@@ -42,6 +42,8 @@ var Phaser = {
         Image: require('gameobjects/image/Image'),
         Sprite: require('gameobjects/sprite/Sprite'),
         Text: require('gameobjects/text/static/Text'),
+        BitmapText: require('gameobjects/bitmaptext/static/BitmapText'),
+        RetroFont: require('gameobjects/bitmaptext/RetroFont'),
 
         Factories: {
             Container: require('gameobjects/container/ContainerFactory'),
