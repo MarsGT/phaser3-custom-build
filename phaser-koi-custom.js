@@ -44,6 +44,8 @@ var Phaser = {
         Text: require('gameobjects/text/static/Text'),
         BitmapText: require('gameobjects/bitmaptext/static/BitmapText'),
         RetroFont: require('gameobjects/bitmaptext/RetroFont'),
+        Zone: require('gameobjects/zone/Zone'),
+        Container: require('gameobjects/container/Container'),
 
         Factories: {
             Container: require('gameobjects/container/ContainerFactory'),
@@ -52,7 +54,9 @@ var Phaser = {
             Image: require('gameobjects/image/ImageFactory'),
             Sprite: require('gameobjects/sprite/SpriteFactory'),
             Text: require('gameobjects/text/static/TextFactory'),
-            StaticBitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory')
+            StaticBitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory'),
+            Zone: require('gameobjects/zone/ZoneFactory'),
+            Container: require('gameobjects/container/ContainerFactory')
         },
 
         Creators: {
@@ -63,6 +67,8 @@ var Phaser = {
             Sprite: require('gameobjects/sprite/SpriteCreator'),
             Text: require('gameobjects/text/static/TextCreator'),
             StaticBitmapText: require('gameobjects/bitmaptext/static/BitmapTextCreator'),
+            Zone: require('gameobjects/zone/ZoneCreator'),
+            Container: require('gameobjects/container/ContainerCreator')
         }
     },
     Geom: require('geom'),
