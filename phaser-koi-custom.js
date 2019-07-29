@@ -16,19 +16,30 @@ var Extend = require('utils/object/Extend');
 var Phaser = {
     Animations: require('animations'),
     Cache: require('cache'),
-    Cameras: { Scene2D: require('cameras/2d') },
-    Core: require('core'),
+    Cameras: {
+        Scene2D: require('cameras/2d')
+    },
+    Core: {
+        Config: require('core/Config'),
+        CreateRenderer: require('core/CreateRenderer'),
+        Events: require('core/events'),
+        TimeStep: require('core/TimeStep'),
+        VisibilityHandler: require('core/VisibilityHandler')
+    },
     Class: require('utils/Class'),
     Data: require('data'),
-    Display: { Masks: require('display/mask') },
+    Display: {
+        Masks: require('display/mask')
+    },
     DOM: require('dom'),
     Events: require('events/EventEmitter'),
     Game: require('core/Game'),
     GameObjects: {
         DisplayList: require('gameobjects/DisplayList'),
+        UpdateList: require('gameobjects/UpdateList'),
+
         GameObjectCreator: require('gameobjects/GameObjectCreator'),
         GameObjectFactory: require('gameobjects/GameObjectFactory'),
-        UpdateList: require('gameobjects/UpdateList'),
 
         Components: require('gameobjects/components'),
 
@@ -42,13 +53,9 @@ var Phaser = {
         Image: require('gameobjects/image/Image'),
         Sprite: require('gameobjects/sprite/Sprite'),
         Text: require('gameobjects/text/static/Text'),
-        BitmapText: require('gameobjects/bitmaptext/static/BitmapText'),
         RetroFont: require('gameobjects/bitmaptext/RetroFont'),
         Zone: require('gameobjects/zone/Zone'),
         Container: require('gameobjects/container/Container'),
-
-        Shape: require('gameobjects/shape/Shape'),
-        Rectangle: require('gameobjects/shape/rectangle/Rectangle'),
 
         Factories: {
             Container: require('gameobjects/container/ContainerFactory'),
@@ -57,10 +64,8 @@ var Phaser = {
             Image: require('gameobjects/image/ImageFactory'),
             Sprite: require('gameobjects/sprite/SpriteFactory'),
             Text: require('gameobjects/text/static/TextFactory'),
-            StaticBitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory'),
             Zone: require('gameobjects/zone/ZoneFactory'),
-            Container: require('gameobjects/container/ContainerFactory'),
-            Rectangle: require('gameobjects/shape/rectangle/RectangleFactory')
+            Container: require('gameobjects/container/ContainerFactory')
         },
 
         Creators: {
@@ -70,7 +75,6 @@ var Phaser = {
             Image: require('gameobjects/image/ImageCreator'),
             Sprite: require('gameobjects/sprite/SpriteCreator'),
             Text: require('gameobjects/text/static/TextCreator'),
-            StaticBitmapText: require('gameobjects/bitmaptext/static/BitmapTextCreator'),
             Zone: require('gameobjects/zone/ZoneCreator'),
             Container: require('gameobjects/container/ContainerCreator')
         }
