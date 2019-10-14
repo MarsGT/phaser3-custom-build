@@ -27,18 +27,15 @@ var Phaser = {
         VisibilityHandler: require('core/VisibilityHandler')
     },
     Class: require('utils/Class'),
-    Data: require('data'),
     Display: {
         Masks: require('display/mask')
     },
-    DOM: require('dom'),
     Events: require('events/EventEmitter'),
     Game: require('core/Game'),
     GameObjects: {
         DisplayList: require('gameobjects/DisplayList'),
         UpdateList: require('gameobjects/UpdateList'),
 
-        GameObjectCreator: require('gameobjects/GameObjectCreator'),
         GameObjectFactory: require('gameobjects/GameObjectFactory'),
 
         Components: require('gameobjects/components'),
@@ -48,10 +45,13 @@ var Phaser = {
         GameObject: require('gameobjects/GameObject'),
 
         Container: require('gameobjects/container/Container'),
-        Graphics: require('gameobjects/graphics/Graphics.js'),
         Group: require('gameobjects/group/Group'),
+
+        Graphics: require('gameobjects/graphics/Graphics.js'),
+        Blitter: require('gameobjects/blitter/Blitter'),
         Image: require('gameobjects/image/Image'),
         Sprite: require('gameobjects/sprite/Sprite'),
+        TileSprite: require('gameobjects/tilesprite/TileSprite'),
         Text: require('gameobjects/text/static/Text'),
         RetroFont: require('gameobjects/bitmaptext/RetroFont'),
         Zone: require('gameobjects/zone/Zone'),
@@ -59,52 +59,40 @@ var Phaser = {
 
         Factories: {
             Container: require('gameobjects/container/ContainerFactory'),
-            Graphics: require('gameobjects/graphics/GraphicsFactory'),
             Group: require('gameobjects/group/GroupFactory'),
+            Zone: require('gameobjects/zone/ZoneFactory'),
+
+            Blitter: require('gameobjects/blitter/BlitterFactory'),
+            Graphics: require('gameobjects/graphics/GraphicsFactory'),
             Image: require('gameobjects/image/ImageFactory'),
             Sprite: require('gameobjects/sprite/SpriteFactory'),
-            Text: require('gameobjects/text/static/TextFactory'),
-            Zone: require('gameobjects/zone/ZoneFactory'),
-            Container: require('gameobjects/container/ContainerFactory')
-        },
+            TileSprite: require('gameobjects/tilesprite/TileSpriteFactory'),
 
-        Creators: {
-            Container: require('gameobjects/container/ContainerCreator'),
-            Graphics: require('gameobjects/graphics/GraphicsCreator'),
-            Group: require('gameobjects/group/GroupCreator'),
-            Image: require('gameobjects/image/ImageCreator'),
-            Sprite: require('gameobjects/sprite/SpriteCreator'),
-            Text: require('gameobjects/text/static/TextCreator'),
-            Zone: require('gameobjects/zone/ZoneCreator'),
-            Container: require('gameobjects/container/ContainerCreator')
+            Text: require('gameobjects/text/static/TextFactory'),
+            StaticBitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory')
         }
     },
     Geom: require('geom'),
     Input: require('input'),
     Loader: {
         FileTypes: {
-            AtlasJSONFile: require('loader/filetypes/AtlasJSONFile'),
             AudioFile: require('loader/filetypes/AudioFile'),
             HTML5AudioFile: require('loader/filetypes/HTML5AudioFile'),
             ImageFile: require('loader/filetypes/ImageFile'),
-            JSONFile: require('loader/filetypes/JSONFile'),
-            PluginFile: require('loader/filetypes/PluginFile'),
-            SpriteSheetFile: require('loader/filetypes/SpriteSheetFile'),
-            XMLFile: require('loader/filetypes/XMLFile')
+            SpriteSheetFile: require('loader/filetypes/SpriteSheetFile')
         },
         File: require('loader/File'),
         FileTypesManager: require('loader/FileTypesManager'),
         GetURL: require('loader/GetURL'),
         LoaderPlugin: require('loader/LoaderPlugin'),
         MergeXHRSettings: require('loader/MergeXHRSettings'),
-        MultiFile: require('loader/MultiFile'),
         XHRLoader: require('loader/XHRLoader'),
         XHRSettings: require('loader/XHRSettings')
     },
     Math: require('math'),
-    // Physics: {
-    //     Arcade: require('physics/arcade')
-    // },
+    Physics: {
+        Arcade: require('physics/arcade')
+    },
     Plugins: require('plugins'),
     Renderer: require('renderer'),
     Scale: require('scale'),
@@ -112,7 +100,16 @@ var Phaser = {
     Scenes: require('scene'),
     Sound: require('sound'),
     Structs: require('structs'),
-    Textures: require('textures'),
+    Textures: {
+        Events: require('textures/events'),
+        Parsers: {
+            Image: require('textures/parsers/Image'),
+            SpriteSheet: require('textures/parsers/SpriteSheet'),
+        },
+        Texture: require('textures/Texture'),
+        TextureManager: require('textures/TextureManager'),
+        TextureSource: require('textures/TextureSource')
+    },
     Time: require('time'),
     Tweens: require('tweens'),
     Utils: require('utils')
@@ -127,9 +124,3 @@ Phaser = Extend(false, Phaser, CONST);
 module.exports = Phaser;
 
 global.Phaser = Phaser;
-
-/*
- * "Documentation is like pizza: when it is good, it is very, very good;
- * and when it is bad, it is better than nothing."
- *  -- Dick Brandon
- */
