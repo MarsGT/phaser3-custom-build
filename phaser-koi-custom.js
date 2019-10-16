@@ -73,13 +73,23 @@ var Phaser = {
         }
     },
     Geom: require('geom'),
-    Input: require('input'),
+    Input: {
+        CreateInteractiveObject: require('input/CreateInteractiveObject'),
+        Events: require('input/events'),
+        InputManager: require('input/InputManager'),
+        InputPlugin: require('input/InputPlugin'),
+        InputPluginCache: require('input/InputPluginCache'),
+        Mouse: require('input/mouse'),
+        Pointer: require('input/Pointer'),
+        Touch: require('input/touch')
+    },
     Loader: {
         FileTypes: {
             AudioFile: require('loader/filetypes/AudioFile'),
             HTML5AudioFile: require('loader/filetypes/HTML5AudioFile'),
             ImageFile: require('loader/filetypes/ImageFile'),
-            SpriteSheetFile: require('loader/filetypes/SpriteSheetFile')
+            SpriteSheetFile: require('loader/filetypes/SpriteSheetFile'),
+            ScenePluginFile: require('loader/filetypes/ScenePluginFile')
         },
         File: require('loader/File'),
         FileTypesManager: require('loader/FileTypesManager'),
