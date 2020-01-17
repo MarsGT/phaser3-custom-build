@@ -69,7 +69,11 @@ var Phaser = {
             TileSprite: require('gameobjects/tilesprite/TileSpriteFactory'),
 
             Text: require('gameobjects/text/static/TextFactory'),
-            StaticBitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory')
+            StaticBitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory'),
+        },
+        Creators: {
+            Sprite: require('gameobjects/sprite/SpriteCreator'),
+            Graphics: require('gameobjects/graphics/GraphicsCreator')
         }
     },
     Geom: require('geom'),
@@ -89,7 +93,6 @@ var Phaser = {
             HTML5AudioFile: require('loader/filetypes/HTML5AudioFile'),
             ImageFile: require('loader/filetypes/ImageFile'),
             SpriteSheetFile: require('loader/filetypes/SpriteSheetFile'),
-            ScenePluginFile: require('loader/filetypes/ScenePluginFile')
         },
         File: require('loader/File'),
         FileTypesManager: require('loader/FileTypesManager'),
