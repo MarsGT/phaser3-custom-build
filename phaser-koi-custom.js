@@ -1,13 +1,7 @@
-/**
- * @author       Richard Davey <rich@photonstorm.com>
- * @copyright    2019 Photon Storm Ltd.
- * @license      {@link https://github.com/photonstorm/phaser/blob/master/license.txt|MIT License}
- */
-
 require('polyfills');
 
-var CONST = require('const');
-var Extend = require('utils/object/Extend');
+var CONST = require('const')
+var Extend = require('utils/object/Extend')
 
 /**
  * @namespace Phaser
@@ -128,12 +122,8 @@ var Phaser = {
     Utils: require('utils')
 };
 
-//   Merge in the consts
+Phaser = Extend(false, Phaser, CONST)
 
-Phaser = Extend(false, Phaser, CONST);
+module.exports = Phaser
 
-//  Export it
-
-module.exports = Phaser;
-
-global.Phaser = Phaser;
+global.Phaser = Phaser
