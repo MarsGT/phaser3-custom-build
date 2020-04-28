@@ -11,7 +11,6 @@ module.exports = {
     mode: 'production',
 
     entry: {
-        'phaser-koi-custom': `./phaser-koi-custom.js`,
         'phaser-koi-custom.min': './phaser-koi-custom.js'
     },
 
@@ -66,8 +65,6 @@ module.exports = {
             dry: true,
             default: ['dist-koi']
         })
-    ],
-
-    devtool: 'source-map'
+    ]
 
 }
