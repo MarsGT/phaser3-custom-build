@@ -1,6 +1,6 @@
-# Phaser 3 引用库自定义编写模板
+# Phaser3 库文件定制化生成项目
 
-本项目用于生成更精简的自定义组件 Phaser 3 库文件，以用于使用 ES5 编写的 Phaser 3 项目。
+本项目用于生成更精简的自定义组件 Phaser3 库文件，以用于使用 ES5 编写的 Phaser3 项目。
 
 ## 怎样使用
 
@@ -11,4 +11,4 @@
 ## 备注
 
 - 库的配置在根目录下的 phaser-koi-custom.js 文件里
-- 调整配置(如 require 哪些内容)，可以参考 phaser 3 包里、各个目录下的 index.js，也可参考本项目 Fork 的原始项目，即 [phaser3-custom-build](https://github.com/photonstorm/phaser3-custom-build)
+- 如需调整配置(如 require 哪些内容)，可参考 phaser3 引用包里、各个目录下的 index.js，也可参考本项目 Fork 的原始项目，即 [phaser3-custom-build](https://github.com/photonstorm/phaser3-custom-build)
