@@ -99,7 +99,8 @@ var Phaser = {
     },
     Math: require('math'),
     Physics: {
-        Arcade: require('physics/arcade')
+        // Arcade: require('physics/arcade'),
+        Matter: require('physics/matter-js'),
     },
     Plugins: require('plugins'),
     Renderer: require('renderer'),
