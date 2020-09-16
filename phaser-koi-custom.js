@@ -48,6 +48,7 @@ var Phaser = {
         TileSprite: require('gameobjects/tilesprite/TileSprite'),
         Text: require('gameobjects/text/static/Text'),
         RetroFont: require('gameobjects/bitmaptext/RetroFont'),
+        Rope: require('gameobjects/rope/Rope'),
         Zone: require('gameobjects/zone/Zone'),
         Container: require('gameobjects/container/Container'),
 
@@ -67,7 +68,8 @@ var Phaser = {
         },
         Creators: {
             Sprite: require('gameobjects/sprite/SpriteCreator'),
-            Graphics: require('gameobjects/graphics/GraphicsCreator')
+            Graphics: require('gameobjects/graphics/GraphicsCreator'),
+            Rope: require('gameobjects/rope/RopeCreator'),
         }
     },
     Geom: require('geom'),
