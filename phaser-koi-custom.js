@@ -42,22 +42,26 @@ var Phaser = {
         Group: require('gameobjects/group/Group'),
 
         Graphics: require('gameobjects/graphics/Graphics.js'),
-        Blitter: require('gameobjects/blitter/Blitter'),
         Image: require('gameobjects/image/Image'),
         Sprite: require('gameobjects/sprite/Sprite'),
         TileSprite: require('gameobjects/tilesprite/TileSprite'),
         Text: require('gameobjects/text/static/Text'),
         RetroFont: require('gameobjects/bitmaptext/RetroFont'),
-        Rope: require('gameobjects/rope/Rope'),
         Zone: require('gameobjects/zone/Zone'),
         Container: require('gameobjects/container/Container'),
+
+        Particles: require('gameobjects/particles'),
+
+        Shape: require('gameobjects/shape/Shape'),
+        IsoBox: require('gameobjects/shape/isobox/IsoBox'),
+        Arc: require('gameobjects/shape/arc/Arc'),
+        Rectangle: require('gameobjects/shape/rectangle/Rectangle'),
 
         Factories: {
             Container: require('gameobjects/container/ContainerFactory'),
             Group: require('gameobjects/group/GroupFactory'),
             Zone: require('gameobjects/zone/ZoneFactory'),
 
-            Blitter: require('gameobjects/blitter/BlitterFactory'),
             Graphics: require('gameobjects/graphics/GraphicsFactory'),
             Image: require('gameobjects/image/ImageFactory'),
             Sprite: require('gameobjects/sprite/SpriteFactory'),
@@ -65,11 +69,17 @@ var Phaser = {
 
             Text: require('gameobjects/text/static/TextFactory'),
             StaticBitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory'),
+
+            IsoBox: require('gameobjects/shape/isobox/IsoBoxFactory'),
+            Arc: require('gameobjects/shape/arc/ArcFactory'),
+            Rectangle: require('gameobjects/shape/rectangle/RectangleFactory'),
+
+            Particles: require('gameobjects/particles/ParticleManagerFactory')
         },
         Creators: {
             Sprite: require('gameobjects/sprite/SpriteCreator'),
             Graphics: require('gameobjects/graphics/GraphicsCreator'),
-            Rope: require('gameobjects/rope/RopeCreator'),
+            Particles: require('gameobjects/particles/ParticleManagerCreator'),
         }
     },
     Geom: require('geom'),
@@ -100,10 +110,11 @@ var Phaser = {
         XHRSettings: require('loader/XHRSettings')
     },
     Math: require('math'),
-    Physics: {
-        // Arcade: require('physics/arcade'),
-        Matter: require('physics/matter-js'),
-    },
+    Physics: require('physics'),
+    // Physics: {
+    //     Arcade: require('physics/arcade'),
+    //     Matter: require('physics/matter-js'),
+    // },
     Plugins: require('plugins'),
     Renderer: require('renderer'),
     Scale: require('scale'),
